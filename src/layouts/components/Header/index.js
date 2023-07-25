@@ -1,7 +1,7 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import images from '~/assets/images';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faMagnifyingGlass,
@@ -97,7 +97,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link className={cx('logo-link')} to={routesConfig.home}>
+                <Link className={cx('logo-link')} to={config.routes.home}>
                     <img src={images.logo} alt="TikTok" />
                 </Link>
 
