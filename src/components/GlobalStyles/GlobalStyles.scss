@@ -7,7 +7,7 @@
     --black: #000;
 
     // Fonts
-    --font-family: var(--font-family);
+    --font-family: ProximaNova;
 
     // Default Layout
     --default-layout-horizontal-spacer: 24px;
@@ -68,10 +68,19 @@ a {
 }
 @font-face {
     font-family: ProximaNova;
-    src: url('/assets/font/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI5sdO_q.woff2');
+    src: url('/assets/font/TikTokDisplayFont-Bold.woff2');
     font-weight: 700;
 }
-
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/font/zYX9KVElMYYaJe8bpLHnCwDKjWr7AI9sdO_q.woff2');
+    font-weight: 800;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/font/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdA.woff2');
+    font-weight: 500;
+}
 // Custom tippy tooltip
 body .tippy-box {
     border-radius: 8px;

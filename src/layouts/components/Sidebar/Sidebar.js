@@ -1,14 +1,44 @@
-import classNames from "classnames/bind";
-import styles from "./SideBar.module.scss";
+import classNames from 'classnames/bind';
+import styles from './SideBar.module.scss';
+import config from '~/config';
+import Menu, { MenuItem } from './Menu';
+import {
+    DiscoveryActiveIcon,
+    DiscoveryIcon,
+    HomeActiveIcon,
+    HomeIcon,
+    LiveActiveIcon,
+    LiveIcon,
+    UserGroupActiveIcon,
+    UserGroupIcon,
+} from '~/components/Icons';
+import SuggestedAccounts from '~/components/SuggestedAccounts/SuggestedAccounts';
 
 const cx = classNames.bind(styles);
 
 function Sidebar() {
-  return (
-    <aside className={cx("wrapper")}>
-      <h2>Sidebar</h2>
-    </aside>
-  );
+    return (
+        <aside className={cx('wrapper')}>
+            <Menu>
+                <MenuItem title="For You" to={config.routes.home} icon={<HomeIcon />} activeIcon={<HomeActiveIcon />} />
+                <MenuItem
+                    title="Following"
+                    to={config.routes.following}
+                    icon={<UserGroupIcon />}
+                    activeIcon={<UserGroupActiveIcon />}
+                />
+                <MenuItem
+                    title="Discovery"
+                    to={config.routes.discovery}
+                    icon={<DiscoveryIcon />}
+                    activeIcon={<DiscoveryActiveIcon />}
+                />
+                <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
+            </Menu>
+            <SuggestedAccounts label="Suggested Accounts" />
+            {/* <SuggestedAccounts label="Following Accounts" /> */}
+        </aside>
+    );
 }
 
 export default Sidebar;
