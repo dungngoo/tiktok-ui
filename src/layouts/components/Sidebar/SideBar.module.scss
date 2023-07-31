@@ -1,5 +1,11 @@
 .wrapper {
   width: 356px;
   padding: 20px 0 26px 8px;
+  height: 100vh;
+  overflow-y: hidden;
   margin-left: -20px;
+
+  &:hover {
+    overflow-y: scroll;
+  }
 }
